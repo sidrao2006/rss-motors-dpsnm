@@ -1,4 +1,7 @@
 import { Component } from 'react';
+import { Container } from 'react-bootstrap';
+
+import './styles/dashboard.css';
 
 // importing components
 import Topbar from './components/Topbar';
