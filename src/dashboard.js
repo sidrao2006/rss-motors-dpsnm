@@ -5,6 +5,7 @@ import './styles/dashboard.css';
 
 // importing components
 import Topbar from './components/Topbar';
+import Bottombar from './components/Bottombar';
 
 // importing bootstrap stylings
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -14,6 +15,7 @@ class Dashboard extends Component {
     return (
       <div className="Dashboard"> 
       <Topbar/>
+      <Bottombar/>
       </div>
     );
   }
