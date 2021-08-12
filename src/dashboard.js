@@ -12,7 +12,24 @@ class Dashboard extends Component {
     return (
       <Container fluid id="dashboard">
         <Topbar />
-        <span>Helloooo</span>
+
+        <Row>
+          <Col>
+
+            <Row>
+              {/* Map */}
+            </Row>
+            <Row>
+              {/* Music Player */}
+            </Row>
+
+          </Col>
+
+          <Col>
+            {/* Button Panel */}
+          </Col>
+        </Row>
+
         <Bottombar />
       </Container>
     );
