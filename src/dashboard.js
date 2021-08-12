@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ReactPlayer from 'react-player/soundcloud';
-
+import Buttonpanel from './components/Buttonpanel';
 import './styles/dashboard.css';
 
 // importing components
@@ -40,9 +40,10 @@ class Dashboard extends Component {
 
           </Col>
 
-          <Col>
-            {/* Button Panel */}
+          <Col xs={4}>
+            <Buttonpanel/>
           </Col>
+
         </Row>
 
         <Bottombar />

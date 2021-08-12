@@ -7,7 +7,13 @@ import '../styles/Bottombar.css';
 import '../styles/dashboard.css';
 
 export default function bottombar() {
+    let temp = 22;
+    const tempIncrease = document.getElementById("tempIncrease");
+    const tempDecrease = document.querySelector("#tempDecrease");
+
+
     return (
+        
         <>
             <Navbar fixed="bottom">
                 <Container className="d-flex align-items-center">
@@ -30,9 +36,9 @@ export default function bottombar() {
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div style={{ border: "0px solid black", flexDirection: "column", boxSizing: "border-box", marginTop: "10px" }} className="d-flex justify-content-between align-items-center">
-                                <i className="fa fa-chevron-up dashboard-text" style={{ fontSize: "25px" }}></i>
-                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>20</span>
-                                <i className="fa fa-chevron-down dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-chevron-up dashboard-text" id="#tempIncrease" style={{ fontSize: "25px" }}></i>
+                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temp}</span>
+                                <i className="fa fa-chevron-down dashboard-text" id="#tempDecrease" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
 
@@ -44,9 +50,9 @@ export default function bottombar() {
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div style={{ border: "0px solid black", flexDirection: "column", boxSizing: "border-box", marginTop: "10px" }} className="d-flex justify-content-between align-items-center">
-                                <i className="fa fa-chevron-up dashboard-text" style={{ fontSize: "25px" }}></i>
-                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>20</span>
-                                <i className="fa fa-chevron-down dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-chevron-up dashboard-text" id="#tempIncrease" style={{ fontSize: "25px" }}></i>
+                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temp}</span>
+                                <i className="fa fa-chevron-down dashboard-text" id="#tempDecrease" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
 
