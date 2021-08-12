@@ -1,8 +1,4 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
-import { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import '../components/Buttonpanel.css'
 export default function Buttonpanel() {
   return (
     <>
