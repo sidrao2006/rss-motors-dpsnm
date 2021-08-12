@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import ReactPlayer from 'react-player/soundcloud';
 
 import './styles/dashboard.css';
 
@@ -20,7 +21,21 @@ class Dashboard extends Component {
               {/* Map */}
             </Row>
             <Row>
-              {/* Music Player */}
+              <ReactPlayer
+                id="player"
+                url='https%3A//api.soundcloud.com/tracks/293&amp'
+                height='100px'
+                config={{
+                  soundcloud: {
+                    options: {
+                      buying: false,
+                      sharing: false,
+                      download: false,
+                      show_artwork: false,
+                    }
+                  }
+                }}
+              />
             </Row>
 
           </Col>

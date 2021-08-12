@@ -15,3 +15,7 @@
 .dashboard-text-dark:hover {
     color: white;
 }
+
+#dashboard iframe {
+    border-radius: 10px;
+}
