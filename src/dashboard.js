@@ -7,15 +7,14 @@ import './styles/dashboard.css';
 import Topbar from './components/Topbar';
 import Bottombar from './components/Bottombar';
 
-// importing bootstrap stylings
-import 'bootstrap/dist/css/bootstrap.min.css'
-
 class Dashboard extends Component {
   render() {
     return (
-      <div className="Dashboard"> 
-      <Topbar/>
-      <Bottombar/>
+      <div className="Dashboard">
+        <Container fluid>
+          <Topbar />
+          <Bottombar />
+        </Container>
       </div>
     );
   }
