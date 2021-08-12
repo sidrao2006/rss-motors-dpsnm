@@ -1,5 +1,12 @@
+html, body {
+  background-image: linear-gradient(to top left, lightgray 0%, white 100%); 
+  background-color: lightgray;
+  height: 100%;
+}
+
 body {
   margin: 0;
+  padding: 70pt 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

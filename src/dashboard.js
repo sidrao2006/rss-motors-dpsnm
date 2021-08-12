@@ -10,12 +10,11 @@ import Bottombar from './components/Bottombar';
 class Dashboard extends Component {
   render() {
     return (
-      <div className="Dashboard">
-        <Container fluid>
-          <Topbar />
-          <Bottombar />
-        </Container>
-      </div>
+      <Container fluid id="dashboard">
+        <Topbar />
+        <span>Helloooo</span>
+        <Bottombar />
+      </Container>
     );
   }
 }
