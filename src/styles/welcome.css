@@ -59,7 +59,7 @@
   position: absolute;
   top: 30%;
   height: 50%;
-  width: 90vw;
+  width: 70vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -91,13 +91,13 @@
   transition: 0.3s ease-out;
 }
 #c1:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 #c2:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 #c3:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 #c1 span {

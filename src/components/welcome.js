@@ -13,6 +13,7 @@ export default function welcome() {
         {/* <h2>RSS MOTORS</h2> */}
         <h5>11:00am</h5>
       </div>
+      
 
       <div id="welcome">
         <h2>Welcome!</h2>
