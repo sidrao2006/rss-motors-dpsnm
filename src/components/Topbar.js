@@ -2,6 +2,7 @@ import React from "react";
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
+import Clock from './Clock.js'
 
 export default function Topbar() {
   return (
@@ -33,8 +34,18 @@ export default function Topbar() {
               <span className="m-1 dashboard-text">35°</span>
 
             </Nav.Link>
-            <Nav.Link href="#" className="d-flex justify-content-center align-items-center"><span className="dashboard-text">11 August</span></Nav.Link>
-            <Nav.Link href="#" className="d-flex justify-content-center align-items-center dashboard-text"><span className="dashboard-text">6:00pm</span></Nav.Link>
+            <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
+              <span className="dashboard-text">
+                {
+                  `${new Date().getDate()} ${["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"
+                  ][new Date().getMonth()]}`
+                }
+              </span>
+            </Nav.Link>
+            <Nav.Link href="#" className="d-flex justify-content-center align-items-center dashboard-text">
+              <Clock className="dashboard-text" />
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
