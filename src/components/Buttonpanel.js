@@ -36,10 +36,10 @@ export default function Buttonpanel() {
 
 <div className="container d-flex flex-wrap justify-content-around align-items-center m-3" style={{}}>
 <div className="d-flex justify-content-around align-items-center shadow" style={{width:"140px", height:"50px",borderRadius:"10px"}}>
-<i className="fas fa-address-card d-inline-block dashboard-text" style={{fontSize:"40px",cursor:"pointer"}}></i> <span className="dashboard-text" style={{fontWeight:"600",cursor:"pointer"}}>Contacts</span>
+<i className="fas fa-address-card d-inline-block dashboard-text" style={{fontSize:"30px",cursor:"pointer"}}></i><span className="dashboard-text" style={{fontWeight:"600",cursor:"pointer"}}>Contacts</span>
 
 </div>
-<div className="d-flex justify-content-around align-items-center shadow" style={{width:"120px", height:"40px",borderRadius:"10px"}}>
+<div className="d-flex justify-content-around align-items-center shadow" style={{width:"140px", height:"50px",borderRadius:"10px"}}>
 <i className="fas fa-moon dashboard-text" style={{fontSize:"20px"}}></i>
 <i className="fas fa-sun dashboard-text" style={{fontSize:"20px"}}></i>
 
