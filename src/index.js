@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Dashboard from './dashboard';
+import Onboard from './onboard';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Dashboard />
+    <Onboard/>
   </React.StrictMode>,
   document.getElementById('root')
 );

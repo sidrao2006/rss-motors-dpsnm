@@ -3,6 +3,7 @@ import {Container,Row,Col} from 'react-bootstrap';
 import './styles/onboard.css';
 
 // importing components
+import Welcome from './components/welcome'
 
 class Onboard extends Component {
     render(){
@@ -13,3 +14,5 @@ class Onboard extends Component {
         );
     }
 }
+
+export default Onboard;

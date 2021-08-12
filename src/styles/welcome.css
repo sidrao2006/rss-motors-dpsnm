@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+#nav{
+    background-color: rgba(37, 39, 38, 0.034);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav h4{
+    font-family: montserrat;
+}
+
+#nav h5{
+    font-family: montserrat;
+}
+
+#welcome{
+    /* background-color: rgba(230, 240, 175, 0.671); */
+    position: absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#welcome h2{
+    font-family: poppins;
+    position: relative;
+    font-size:50px;
+}
+
+#welcome h6{
+    font-family:montserrat;
+}
+
+#card{
+    display: flex;
+    border: black 1px solid;
+}
