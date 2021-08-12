@@ -1,8 +1,3 @@
-.button{
-    border: 0px solid black;
-    background: transparent;
-}
-
 .panelButtons{
 
     width: 100px;
@@ -12,8 +7,7 @@
     /* padding: 45px; */
 }
 
-.panelItems{
-    border: 0px solid black;
+button {
+    border: 0px;
     background: transparent;
-
 }
