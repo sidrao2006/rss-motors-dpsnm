@@ -1,0 +1,11 @@
+.button{
+    border: 0px solid black;
+}
+
+.panelButtons{
+
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    /* padding: 45px; */
+}
