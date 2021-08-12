@@ -1,4 +1,5 @@
 import React from "react";
+import '../components/Buttonpanel.css'
 export default function Buttonpanel() {
   return (
     <>
