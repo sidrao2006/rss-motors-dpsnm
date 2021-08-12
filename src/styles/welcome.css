@@ -1,52 +1,159 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#nav{
-    background-color: rgba(37, 39, 38, 0.034);
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    padding:15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#nav {
+  background-color: rgba(37, 39, 38, 0.034);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#nav h4{
-    font-family: montserrat;
+#nav h4 {
+  font-family: "Poppins", sans-serif;
 }
 
-#nav h5{
-    font-family: montserrat;
+#nav h5 {
+  font-family: "Montserrat", sans-serif;
 }
 
-#welcome{
-    /* background-color: rgba(230, 240, 175, 0.671); */
-    position: absolute;
-    top:75px;
-    left:0;
-    width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#welcome h2{
-    font-family: poppins;
-    position: relative;
-    font-size:50px;
+#welcome {
+  /* background-color: rgba(230, 240, 175, 0.671); */
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-#welcome h6{
-    font-family:montserrat;
+#welcome h2 {
+  font-family: poppins;
+  position: relative;
+  font-size: 50px;
 }
 
-#card{
-    display: flex;
-    border: black 1px solid;
+#welcome h6 {
+  font-family: montserrat;
+}
+
+#card {
+  position: absolute;
+  top: 30%;
+  height: 50%;
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: black 1px solid; */
+}
+
+#c1,
+#c3 {
+  font-size: 100px;
+  /* border: 1px solid black; */
+}
+#c2 {
+  font-size: 100px;
+  margin-top: -15px;
+  /* border: 1px solid black; */
+}
+
+#c1,
+#c2,
+#c3 {
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+#c1:hover {
+  transform: scale(1.4);
+}
+#c2:hover {
+  transform: scale(1.4);
+}
+#c3:hover {
+  transform: scale(1.4);
+}
+
+#c1 span {
+  font-size: 20px;
+  /* margin-bottom: 5px; */
+  margin-top: 15px;
+}
+#c2 span {
+  font-size: 20px;
+  /* margin-bottom: 5px; */
+  /* padding-top: 15px; */
+  margin-top: 15px;
+}
+#c3 span {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.leader {
+  font-weight: 200;
+  /* font-size: 14px; */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 17%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons {
+  /* border: 1px solid black; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  font-size: 25px;
+}
+
+.battery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.buttons{
+    margin-left: 30px;
+    border: 0px solid black;
 }
