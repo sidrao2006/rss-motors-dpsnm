@@ -3,7 +3,7 @@ import '../styles/Buttonpanel.css'
 
 export default function Buttonpanel() {
   return (
-    <>
+    <div style={{overflow:"hidden"}}>
       <div className="container d-flex flex-wrap justify-content-around align-items-center  m-3" >
         <button className="panelButtons d-flex justify-content-around align-items-center shadow" >
           <i className="fas fa-parking d-inline-block dashboard-text" style={{ fontSize: "30px" }}></i>
@@ -41,11 +41,11 @@ export default function Buttonpanel() {
         <button className="d-flex justify-content-around align-items-center shadow" style={{ width: "140px", height: "50px", borderRadius: "10px" }}>
           <i className="fas fa-moon dashboard-text" style={{ fontSize: "20px" }}></i>
           <i className="fas fa-sun dashboard-text" style={{ fontSize: "20px" }}></i>
-
+  
         </button>
       </div>
 
-    </>
+    </div>
 
   );
 }
