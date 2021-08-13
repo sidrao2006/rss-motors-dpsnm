@@ -1,5 +1,7 @@
 import React from "react";
 import Clock from "./Clock";
+import { Link } from "react-router-dom";
+import { users } from "../data/users.js";
 
 import "../styles/welcome.css";
 import "../styles/dashboard.css";
@@ -20,29 +22,18 @@ export default function welcome() {
       </div>
 
       <div id="card">
-        <div id="c1">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <span>Profile 2</span>
-          <span className="leader" style={{ fontSize: "12px" }}>
-            example1@vb.com
-          </span>
-        </div>
+        {
+          Object.entries(users).map(([uname, { name, email }], i) =>
+            <Link id={`c${i + 1}`} to={`/dashboard/${uname}`}>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span>{name}</span>
+              <span className="leader" style={{ fontSize: "12px" }}>
+                {email}
+              </span>
+            </Link>
+          )
+        }
 
-        <div id="c2">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <span>Profile 1</span>
-          <span className="leader" style={{ fontSize: "12px" }}>
-            example1@vb.com
-          </span>
-        </div>
-
-        <div id="c3">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <span>Profile 3</span>
-          <span className="leader" style={{ fontSize: "12px" }}>
-            example1@vb.com
-          </span>
-        </div>
       </div>
 
       <footer id="footer">

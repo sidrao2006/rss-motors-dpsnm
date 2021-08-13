@@ -3,6 +3,8 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Clock from './Clock.js'
+import { useParams } from 'react-router-dom';
+import { users } from "../data/users.js";
 
 export default function Topbar() {
   return (
@@ -41,6 +43,10 @@ export default function Topbar() {
             </Nav.Link>
             <Nav.Link href="#" className="d-flex justify-content-center align-items-center dashboard-text">
               <Clock className="dashboard-text" />
+            </Nav.Link>
+
+            <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
+              <span className="dashboard-text">Logged in as {users[useParams().id].name}</span>
             </Nav.Link>
           </Nav>
         </Container>

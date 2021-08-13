@@ -52,7 +52,7 @@ export default function Buttonpanel() {
 
 function showCurrentLocation() {
   // Get current location coordinates
-    navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     window.map.flyTo(
       {
         center: [
