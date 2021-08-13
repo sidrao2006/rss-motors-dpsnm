@@ -3,7 +3,7 @@
     height: 32px;
     width: 32px;
     display: block;
-}
+} 
 
 .heat-seat {
     background-image: url(../assets/heatseat.png);
@@ -11,6 +11,10 @@
     width: 30px;
     display: block;
 }
+/* .heat-seat:hover{
+    background-image: url(../assets/heatseatRed.png);
+
+} */
 
 .heat-seat.dashboard-text {
     filter: contrast(0.5);

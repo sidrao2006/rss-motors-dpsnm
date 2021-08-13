@@ -2,19 +2,19 @@ import React from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+import { changeColor } from "../data/barBottom.js";
 
 import '../styles/Bottombar.css';
 import '../styles/dashboard.css';
 
 export default function bottombar() {
     let temp = 22;
-    const tempIncrease = document.getElementById("tempIncrease");
-    const tempDecrease = document.querySelector("#tempDecrease");
-
+    
 
     return (
-        
+
         <>
+        
             <Navbar fixed="bottom">
                 <Container className="d-flex align-items-center">
                     <Nav style={{ border: "0px solid black", width: "100%" }} className="d-flex justify-content-around align-items-center container-fluid">
@@ -28,9 +28,9 @@ export default function bottombar() {
                             </div>
                         </Nav.Link>
 
-                        <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
+                        <Nav.Link href="#" onClick={(e)=>changeColor(e.target)} className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="heat-seat dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="heat-seat" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
 
