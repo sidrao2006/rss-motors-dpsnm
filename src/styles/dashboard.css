@@ -7,15 +7,23 @@
     color: black;
 }
 
-.dashboard-text-dark {
-    color: lightgray;
-    transition: color 0.4s;
+.map-container {
+    margin-left: 10px;
+    border-radius: 10px;
+    position: absolute !important;
+    top: 0; 
+    left: 0;
+    height: 65%;
+    width: 100%;
 }
 
-.dashboard-text-dark:hover {
-    color: white;
+.player {
+    margin-top: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-#dashboard iframe {
+.player > iframe {
     border-radius: 10px;
 }
