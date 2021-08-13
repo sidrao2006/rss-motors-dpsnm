@@ -1,7 +1,5 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
+
 import "../styles/welcome.css";
 import "../styles/dashboard.css";
 
@@ -13,7 +11,7 @@ export default function welcome() {
         {/* <h2>RSS MOTORS</h2> */}
         <h5>11:00am</h5>
       </div>
-      
+
 
       <div id="welcome">
         <h2>Welcome!</h2>
@@ -50,7 +48,7 @@ export default function welcome() {
         <div className="themeChange">
           <button
             className="buttons d-flex justify-content-around align-items-center shadow"
-            style={{ width: "140px", height: "50px", borderRadius: "10px"}}
+            style={{ width: "140px", height: "50px", borderRadius: "10px" }}
           >
             <i
               className="fas fa-moon dashboard-text"

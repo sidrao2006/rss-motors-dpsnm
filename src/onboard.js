@@ -1,15 +1,14 @@
-import {Component} from 'react';
-import {Container,Row,Col} from 'react-bootstrap';
-import './styles/onboard.css';
+import { Component } from 'react';
+import { Container } from 'react-bootstrap';
 
 // importing components
 import Welcome from './components/welcome'
 
 class Onboard extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <Container fluid id="onboard">
-                <Welcome/>
+                <Welcome />
             </Container>
         );
     }
