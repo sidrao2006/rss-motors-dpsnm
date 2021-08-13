@@ -8,7 +8,7 @@ export default function Buttonpanel() {
         <button className="panelButtons d-flex justify-content-around align-items-center shadow" >
           <i className="fas fa-parking d-inline-block dashboard-text" style={{ fontSize: "30px" }}></i>
         </button>
-        <button className="panelButtons d-flex justify-content-around align-items-center shadow" >
+        <button className="panelButtons d-flex justify-content-around align-items-center shadow" onClick={showCurrentLocation}>
           <i className="fas fa-location-arrow d-inline-block dashboard-text" style={{ fontSize: "30px" }}></i>
         </button>
       </div>
@@ -48,4 +48,19 @@ export default function Buttonpanel() {
     </>
 
   );
+}
+
+function showCurrentLocation() {
+  // Get current location coordinates
+    navigator.geolocation.getCurrentPosition(function (position) {
+    window.map.flyTo(
+      {
+        center: [
+          position.coords.longitude,
+          position.coords.latitude
+        ],
+        essential: true
+      }
+    )
+  })
 }

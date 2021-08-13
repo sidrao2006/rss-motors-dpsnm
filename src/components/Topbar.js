@@ -36,11 +36,7 @@ export default function Topbar() {
             </Nav.Link>
             <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
               <span className="dashboard-text">
-                {
-                  `${new Date().getDate()} ${["January", "February", "March", "April", "May", "June",
-                    "July", "August", "September", "October", "November", "December"
-                  ][new Date().getMonth()]}`
-                }
+                14 August 2026
               </span>
             </Nav.Link>
             <Nav.Link href="#" className="d-flex justify-content-center align-items-center dashboard-text">

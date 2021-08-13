@@ -35,6 +35,8 @@ class Dashboard extends Component {
       }),
       'top-left'
     );
+
+    window.map = map;
   }
 
   render() {
