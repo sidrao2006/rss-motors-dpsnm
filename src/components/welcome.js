@@ -1,4 +1,5 @@
 import React from "react";
+import Clock from "./Clock";
 
 import "../styles/welcome.css";
 import "../styles/dashboard.css";
@@ -7,9 +8,9 @@ export default function welcome() {
   return (
     <div id="container">
       <div id="nav">
-        <h4>14 August 2026</h4>
+        <p>14 August 2026</p>
         {/* <h2>RSS MOTORS</h2> */}
-        <h5>11:00am</h5>
+        <p> <Clock /> </p>
       </div>
 
 

@@ -18,12 +18,9 @@
   justify-content: space-between;
 }
 
-#nav h4 {
-  font-family: "Poppins", sans-serif;
-}
-
-#nav h5 {
+#nav p {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 
 #container {
