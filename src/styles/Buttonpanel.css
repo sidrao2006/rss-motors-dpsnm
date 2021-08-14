@@ -25,9 +25,6 @@ button {
 .flickercolor{
     animation: colorchange 1s infinite;
 }
-.noevents{
-    pointer-events: none;
-    }
 
 @keyframes colorchange {
     0%{

@@ -18,9 +18,6 @@
     width: 30px;
     display: block;
 }
-.noevents{
-    pointer-events: none;
-}
 
 /* .heat-seat:hover{
     background-image: url(../assets/heatseatRed.png);
