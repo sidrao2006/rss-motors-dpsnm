@@ -7,12 +7,14 @@ import { useParams } from 'react-router-dom';
 import { users } from "../utils/users.js";
 
 export default function Topbar() {
+  const theme = window.localStorage.getItem('theme') === 'theme-dark' ? '-dark' : '';
+
   return (
     <>
       <Navbar fixed="top">
 
         <Container className="d-flex align-items-center">
-          <Navbar.Brand href="#">RSS MOTORS</Navbar.Brand>
+          <Navbar.Brand href="#"><img src={`${process.env.PUBLIC_URL}/logo${theme}.png`} alt="RSS Motors" style={{ width: "55px", height: "55px" }} /></Navbar.Brand>
           <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
             <span className="dashboard-text" style={{ fontSize: "34px", fontWeight: "600" }}>D</span>
             <span className="m-1 dashboard-text" style={{ fontSize: "15px" }}>N</span>
