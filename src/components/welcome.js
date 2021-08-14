@@ -59,7 +59,7 @@ export default function welcome() {
             bluetooth
           </i>
           <span className="pointer battery dashboard-text">
-            <span style={{ fontSize: "10px", fontWeight: "700" }}>100%</span>
+            <span style={{ fontSize: "10px", fontWeight: "700" }}>80%</span>
             <i className="pointer fa fa-battery-4 dashboard-text" style={{ fontSize: "25px" }}></i>
           </span>
           <i className="pointer fas fa-cloud-sun-rain dashboard-text"></i>

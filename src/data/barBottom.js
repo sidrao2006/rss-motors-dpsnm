@@ -1,6 +1,7 @@
 // heatseat border bottom animation function
 export function changeColor(heatseat) {
-    heatseat.classList.toggle("heatseatToggle");
+    heatseat.classList.toggle("heat-seat-red");
+    heatseat.classList.toggle("heat-seat");
 }
 // parking red color change function
 export function changeColorparking(parking) {

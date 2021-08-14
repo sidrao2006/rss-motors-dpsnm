@@ -32,7 +32,7 @@ export default function bottombar() {
 
                         <Nav.Link href="#" onClick={(e)=>changeColor(e.target)} className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="heat-seat" style={{ fontSize: "25px" }}></i>
+                                <i className="heat-seat dashboard-text" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
 
