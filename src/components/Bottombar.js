@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { changeColor } from "../data/barBottom.js";
+import { changeColor, updateTemperature } from "../data/barBottom.js";
 import { changeMute } from "../data/barBottom.js";
+import { useParams } from 'react-router-dom';
 
 
 import '../styles/Bottombar.css';
 import '../styles/dashboard.css';
 
-export default function bottombar() {
-    let temp = 22;
-    
+export default function BottomBar() {
+    let { id } = useParams();
+
+    const [temperature1, setTemperature1] = useState(window.localStorage.getItem(`${id}-temperature1`) || 22);
+    const [temperature2, setTemperature2] = useState(window.localStorage.getItem(`${id}-temperature2`) || 22);
 
     return (
 
         <>
-        
             <Navbar fixed="bottom">
                 <Container className="d-flex align-items-center">
                     <Nav style={{ border: "0px solid black", width: "100%" }} className="d-flex justify-content-around align-items-center container-fluid">
@@ -30,7 +32,7 @@ export default function bottombar() {
                             </div>
                         </Nav.Link>
 
-                        <Nav.Link href="#" onClick={(e)=>changeColor(e.target)} className="d-flex justify-content-center align-items-center">
+                        <Nav.Link href="#" onClick={(e) => changeColor(e.target)} className="d-flex justify-content-center align-items-center">
                             <div>
                                 <i className="heat-seat dashboard-text" style={{ fontSize: "25px" }}></i>
                             </div>
@@ -38,9 +40,9 @@ export default function bottombar() {
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div style={{ border: "0px solid black", flexDirection: "column", boxSizing: "border-box", marginTop: "10px" }} className="d-flex justify-content-between align-items-center">
-                                <i className="fa fa-chevron-up dashboard-text" id="tempIncrease" style={{ fontSize: "25px" }}></i>
-                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temp}</span>
-                                <i className="fa fa-chevron-down dashboard-text" id="tempDecrease" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-chevron-up dashboard-text" id="tempIncrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature1, temperature1 + 1, `${id}-temperature1`)}></i>
+                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temperature1}</span>
+                                <i className="fa fa-chevron-down dashboard-text" id="tempDecrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature1, temperature1 - 1, `${id}-temperature1`)}></i>
                             </div>
                         </Nav.Link>
 
@@ -52,9 +54,9 @@ export default function bottombar() {
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div style={{ border: "0px solid black", flexDirection: "column", boxSizing: "border-box", marginTop: "10px" }} className="d-flex justify-content-between align-items-center">
-                                <i className="fa fa-chevron-up dashboard-text" id="tempIncrease" style={{ fontSize: "25px" }}></i>
-                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temp}</span>
-                                <i className="fa fa-chevron-down dashboard-text" id="tempDecrease" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-chevron-up dashboard-text" id="tempIncrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature2, temperature2 + 1, `${id}-temperature2`)}></i>
+                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temperature2}</span>
+                                <i className="fa fa-chevron-down dashboard-text" id="tempDecrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature2, temperature2 - 1, `${id}-temperature2`)}></i>
                             </div>
                         </Nav.Link>
 
@@ -68,9 +70,9 @@ export default function bottombar() {
                                 <i className="fa fa-mobile-alt dashboard-text" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
-                        <Nav.Link  href="#"   className="d-flex justify-content-center align-items-center">
+                        <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i onClick={(e)=>changeMute(e.target)} className="fa fa-volume-up dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i onClick={(e) => changeMute(e.target)} className="fa fa-volume-up dashboard-text" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">

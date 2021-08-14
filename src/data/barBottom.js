@@ -21,3 +21,9 @@ export function changeMute(sound) {
 
     console.log("mutee")
 }
+
+export function updateTemperature(setter, value, key) {
+    setter(value);
+
+    window.localStorage.setItem(key, value);
+}
