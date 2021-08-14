@@ -68,9 +68,9 @@ export default function bottombar() {
                                 <i className="fa fa-mobile-alt dashboard-text" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
-                        <Nav.Link onClick={(e)=>changeMute(e.target)} href="#" className="d-flex justify-content-center align-items-center">
+                        <Nav.Link  href="#"   className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="fa fa-volume-up dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i onClick={(e)=>changeMute(e.target)} className="fa fa-volume-up dashboard-text" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">

@@ -9,7 +9,7 @@ export default function Buttonpanel() {
     <div style={{ overflow: "hidden" }}>
       <div className="container d-flex flex-wrap justify-content-around align-items-center  m-3" >
         <button onClick={(e) => changeColorparking(e.currentTarget)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
-          <i className="fas fa-parking d-inline-block dashboard-text" style={{ fontSize: "30px", transition: "0.5s" }}></i>
+          <i className="noevents fas fa-parking d-inline-block dashboard-text" style={{ fontSize: "30px", transition: "0.5s" }}></i>
         </button>
         <button className="panelButtons d-flex justify-content-around align-items-center shadow" onClick={showCurrentLocation}>
           <i className="fas fa-location-arrow d-inline-block dashboard-text" style={{ fontSize: "30px" }}></i>
@@ -28,11 +28,11 @@ export default function Buttonpanel() {
 
       <div className="container d-flex flex-wrap justify-content-around align-items-center m-3" >
         <button onClick={(e) => changeColorindicator(e.currentTarget)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
-          <i className="fas fa-angle-left d-inline-block dashboard-text" style={{ fontSize: "40px" }}></i>
+          <i className="fas fa-angle-left d-inline-block dashboard-text noevents" style={{ fontSize: "40px" }}></i>
 
         </button>
         <button onClick={(e) => changeColorindicator(e.currentTarget)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
-          <i className="fas fa-angle-right dashboard-text" style={{ fontSize: "40px" }}></i>
+          <i className="fas fa-angle-right dashboard-text noevents" style={{ fontSize: "40px" }}></i>
         </button>
       </div>
 
