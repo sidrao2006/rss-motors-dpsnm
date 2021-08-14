@@ -3,6 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { changeColor } from "../data/barBottom.js";
+import { changeMute } from "../data/barBottom.js";
+
 
 import '../styles/Bottombar.css';
 import '../styles/dashboard.css';
@@ -66,7 +68,7 @@ export default function bottombar() {
                                 <i className="fa fa-mobile-alt dashboard-text" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
-                        <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
+                        <Nav.Link onClick={(e)=>changeMute(e.target)} href="#" className="d-flex justify-content-center align-items-center">
                             <div>
                                 <i className="fa fa-volume-up dashboard-text" style={{ fontSize: "25px" }}></i>
                             </div>

@@ -11,3 +11,12 @@ export function changeColorindicator(indicators) {
     indicators.classList.toggle("flickercolor");
 }
 
+export function changeMute(sound) {
+    sound.classList.toggle("fa");
+    sound.classList.toggle("fa-volume-up");
+
+    sound.classList.toggle("fas");
+    sound.classList.toggle("fa-volume-mute");
+
+    console.log("mutee")
+}
