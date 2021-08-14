@@ -18,6 +18,12 @@
     width: 30px;
     display: block;
 }
+.high-beam-down {
+    background-image: url(../assets/highbeamDown.jpeg);
+    height: 30px;
+    width: 30px;
+    display: block;
+}
 
 /* .heat-seat:hover{
     background-image: url(../assets/heatseatRed.png);

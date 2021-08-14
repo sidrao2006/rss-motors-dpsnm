@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { changeColor, updateTemperature } from "../data/barBottom.js";
-import { changeMute } from "../data/barBottom.js";
+import { changeColor, updateTemperature, changeMute, changeDirection } from "../data/barBottom.js";
 import { useParams } from 'react-router-dom';
 
 
@@ -22,7 +21,7 @@ export default function BottomBar() {
             <Navbar fixed="bottom">
                 <Container className="d-flex align-items-center">
                     <Nav style={{ border: "0px solid black", width: "100%" }} className="d-flex justify-content-around align-items-center container-fluid">
-                        <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
+                        <Nav.Link href="#" onClick={(e) => changeDirection(e.target)} className="d-flex justify-content-center align-items-center">
                             <i className="high-beam dashboard-text" style={{ fontSize: "25px" }}></i>
                         </Nav.Link>
 
