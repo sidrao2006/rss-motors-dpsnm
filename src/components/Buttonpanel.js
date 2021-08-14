@@ -6,10 +6,10 @@ import { changeColorindicator } from "../data/barBottom.js";
 
 export default function Buttonpanel() {
   return (
-    <div style={{overflow:"hidden"}}>
+    <div style={{ overflow: "hidden" }}>
       <div className="container d-flex flex-wrap justify-content-around align-items-center  m-3" >
-        <button onClick={(e)=>changeColorparking(e.target)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
-          <i className="fas fa-parking d-inline-block dashboard-text"  style={{ fontSize: "30px",transition:"0.5s" }}></i>
+        <button onClick={(e) => changeColorparking(e.currentTarget)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
+          <i className="fas fa-parking d-inline-block dashboard-text" style={{ fontSize: "30px", transition: "0.5s" }}></i>
         </button>
         <button className="panelButtons d-flex justify-content-around align-items-center shadow" onClick={showCurrentLocation}>
           <i className="fas fa-location-arrow d-inline-block dashboard-text" style={{ fontSize: "30px" }}></i>
@@ -27,12 +27,12 @@ export default function Buttonpanel() {
       </div>
 
       <div className="container d-flex flex-wrap justify-content-around align-items-center m-3" >
-        <button onClick={(e)=>changeColorindicator(e.target)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
+        <button onClick={(e) => changeColorindicator(e.currentTarget)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
           <i className="fas fa-angle-left d-inline-block dashboard-text" style={{ fontSize: "40px" }}></i>
 
         </button>
-        <button onClick={(e)=>changeColorindicator(e.target)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
-          <i className="fas fa-angle-right dashboard-text"  style={{ fontSize: "40px" }}></i>
+        <button onClick={(e) => changeColorindicator(e.currentTarget)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
+          <i className="fas fa-angle-right dashboard-text" style={{ fontSize: "40px" }}></i>
         </button>
       </div>
 
@@ -44,7 +44,7 @@ export default function Buttonpanel() {
         <button className="d-flex justify-content-around align-items-center shadow" style={{ width: "140px", height: "50px", borderRadius: "10px" }}>
           <i className="fas fa-moon dashboard-text" style={{ fontSize: "20px" }}></i>
           <i className="fas fa-sun dashboard-text" style={{ fontSize: "20px" }}></i>
-  
+
         </button>
       </div>
 
