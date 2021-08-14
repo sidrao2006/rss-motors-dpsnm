@@ -11,25 +11,24 @@
     width: 30px;
     display: block;
 }
+
+.heat-seat-red {
+    background-image: url(../assets/heatseatRed.png);
+    height: 30px;
+    width: 30px;
+    display: block;
+}
+
 /* .heat-seat:hover{
     background-image: url(../assets/heatseatRed.png);
 
 } */
 
-.heat-seat.dashboard-text {
+.heat-seat.dashboard-text, .high-beam.dashboard-text {
     filter: contrast(0.5);
     transition: filter 0.4s;
 }
 
-.high-beam.dashboard-text {
-    filter: contrast(0.5);
-    transition: filter 0.4s;
-}
-
-.heat-seat.dashboard-text:hover {
-    filter: contrast(1);
-}
-
-.high-beam.dashboard-text:hover {
+.heat-seat.dashboard-text:hover, .high-beam.dashboard-text:hover {
     filter: contrast(1);
 }
