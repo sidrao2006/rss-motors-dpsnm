@@ -1,17 +1,13 @@
-// const heatseat = document.querySelector('.heat-seat')
-// console.log("Hello")
-
-// heatseat.addEventListener("click",()=>{
-//     heatseat.style.backgroundImage="url('../assets/heatseatRed.png')"
-//     console.log("hi")
-// })
-console.log("Hello")
-
+// heatseat border bottom animation function
 export function changeColor(heatseat) {
-// heatseat.style.background="red";
-
-    heatseat.style.backgroundImage="url('../assets/heatseatRed.png')"
-    // console.log(hello)
+    heatseat.classList.toggle("heatseatToggle");
 }
-
+// parking red color change function
+export function changeColorparking(parking) {
+    parking.classList.toggle("red");
+}
+// indicator flicker animation
+export function changeColorindicator(indicators) {
+    indicators.classList.toggle("flickercolor");
+}
 

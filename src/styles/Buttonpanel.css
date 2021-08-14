@@ -13,3 +13,29 @@ button {
     border: 0px;
     background: transparent;
 }
+.heatseatToggle{
+    border-bottom: 2px solid red;
+}
+.red{
+    background: red;
+}
+
+.green{
+    background: rgb(133, 244, 133);
+}
+
+.flickercolor{
+    animation: colorchange 1s infinite;
+}
+
+@keyframes colorchange {
+    0%{
+        background: rgb(50, 222, 50);
+    }
+    50%{
+        background: #ddd;
+    }
+    100%{
+        background: rgb(50, 222, 50);
+    }
+}
