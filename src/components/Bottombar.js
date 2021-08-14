@@ -24,7 +24,7 @@ export default function bottombar() {
             <Navbar fixed="bottom">
                 <Container className="d-flex align-items-center">
                     <Nav style={{ border: "0px solid black", width: "100%" }} className="d-flex justify-content-around align-items-center container-fluid">
-                        <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
+                        <Nav.Link href="#" onClick={(e)=>changeDirection(e.target)} className="d-flex justify-content-center align-items-center">
                             <i className="high-beam dashboard-text" style={{ fontSize: "25px" }}></i>
                         </Nav.Link>
 
