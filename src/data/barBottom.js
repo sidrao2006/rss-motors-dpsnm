@@ -1,7 +1,12 @@
-// heatseat border bottom animation function
+// heatseat color animation function
 export function changeColor(heatseat) {
     heatseat.classList.toggle("heat-seat-red");
     heatseat.classList.toggle("heat-seat");
+}
+// highbeam direction animation function
+export function changeDirection(highbeam) {
+    highbeam.classList.toggle("high-beam-down");
+    highbeam.classList.toggle("high-beam");
 }
 // parking red color change function
 export function changeColorparking(parking) {
@@ -21,3 +26,6 @@ export function changeMute(sound) {
 
     console.log("mutee")
 }
+
+
+

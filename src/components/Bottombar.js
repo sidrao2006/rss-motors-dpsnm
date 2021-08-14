@@ -3,7 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { changeColor } from "../data/barBottom.js";
+import { changeDirection } from "../data/barBottom.js";
+
 import { changeMute } from "../data/barBottom.js";
+import { increase } from "../data/barBottom.js";
+
 
 
 import '../styles/Bottombar.css';
@@ -38,7 +42,12 @@ export default function bottombar() {
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div style={{ border: "0px solid black", flexDirection: "column", boxSizing: "border-box", marginTop: "10px" }} className="d-flex justify-content-between align-items-center">
-                                <i className="fa fa-chevron-up dashboard-text" id="tempIncrease" style={{ fontSize: "25px" }}></i>
+                                <i onClick={()=>{
+                                    console.log("HIIIII")
+                                    temp=temp+1;
+                                }   
+                                }
+                                 className="fa fa-chevron-up dashboard-text" id="tempIncrease" style={{ fontSize: "25px" }}></i>
                                 <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temp}</span>
                                 <i className="fa fa-chevron-down dashboard-text" id="tempDecrease" style={{ fontSize: "25px" }}></i>
                             </div>
