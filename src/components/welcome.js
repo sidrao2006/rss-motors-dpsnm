@@ -1,7 +1,7 @@
 import React from "react";
 import Clock from "./Clock";
 import { Link } from "react-router-dom";
-import { users } from "../data/users.js";
+import { users } from "../utils/users.js";
 
 import "../styles/welcome.css";
 import "../styles/dashboard.css";

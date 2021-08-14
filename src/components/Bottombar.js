@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { changeColor, updateTemperature, changeMute, changeDirection } from "../data/barBottom.js";
+import { changeColor, updateTemperature, changeMute, changeDirection } from "../utils/functions.js";
 import { useParams } from 'react-router-dom';
 
 

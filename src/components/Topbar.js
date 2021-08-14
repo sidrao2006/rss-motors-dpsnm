@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Clock from './Clock.js'
 import { useParams } from 'react-router-dom';
-import { users } from "../data/users.js";
+import { users } from "../utils/users.js";
 
 export default function Topbar() {
   return (

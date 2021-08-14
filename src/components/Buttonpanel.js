@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/Buttonpanel.css'
-import { changeColorparking } from "../data/barBottom.js";
-import { changeColorindicator } from "../data/barBottom.js";
+import { changeColorparking } from "../utils/functions.js";
+import { changeColorindicator } from "../utils/functions.js";
 
 
 export default function Buttonpanel() {
