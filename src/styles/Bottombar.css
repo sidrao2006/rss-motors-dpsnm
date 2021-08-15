@@ -12,6 +12,10 @@
     display: block;
 }
 
+.blue{
+    color: blue !important;
+}
+
 .heat-seat-red {
     background-image: url(../assets/heatseatRed.png);
     height: 30px;

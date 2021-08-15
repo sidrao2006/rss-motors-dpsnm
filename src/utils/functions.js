@@ -16,7 +16,19 @@ export function changeColorparking(parking) {
 export function changeColorcar(car) {
     car.classList.toggle("color-red");
 }
+// find bluetooth
+export function findbluetooth(bluetoothIcon) {
+console.log(bluetoothIcon.style.color);
 
+    if(bluetoothIcon.classList.contains("blue")){
+        bluetoothIcon.classList.toggle('blue',false)
+        
+    }else{
+        navigator.bluetooth.requestDevice({acceptAllDevices: true}).then(() => {  
+        bluetoothIcon.classList.toggle("blue",true) }).catch(e => console.error(e))
+        console.log(bluetoothIcon.style.color);
+    }
+}
 // indicator flicker animation
 export function changeColorindicator(indicators) {
     indicators.classList.toggle("flickercolor");
