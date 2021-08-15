@@ -33,3 +33,7 @@
 .heat-seat.body-theme-char:hover, .high-beam.body-theme-char:hover {
     filter: contrast(1);
 }
+
+.color-red{
+    color: red;
+}

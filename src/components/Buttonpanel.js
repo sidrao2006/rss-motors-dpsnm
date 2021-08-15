@@ -2,7 +2,7 @@ import React from "react";
 import '../styles/Buttonpanel.css'
 import { changeColorparking, toggleTheme } from "../utils/functions.js";
 import { changeColorindicator } from "../utils/functions.js";
-
+import { changeColorvideocall } from "../utils/functions.js";
 
 export default function Buttonpanel() {
   return (
@@ -17,11 +17,11 @@ export default function Buttonpanel() {
       </div>
 
       <div className="container d-flex flex-wrap justify-content-around align-items-center  m-3" >
-        <button className="panelButtons d-flex justify-content-around align-items-center shadow">
+        <button onClick={(e) => changeColorvideocall(e.currentTarget)} className="panelButtons d-flex justify-content-around align-items-center shadow">
           <i className="fa fa-phone body-theme-char" style={{ fontSize: "30px", transform: "rotateY(180deg)" }}></i>
         </button>
 
-        <button className="panelButtons d-flex justify-content-around align-items-center shadow" >
+        <button onClick={(e) => changeColorvideocall(e.currentTarget)} className="panelButtons d-flex justify-content-around align-items-center shadow" >
           <i className="fas fa-video body-theme-char" style={{ fontSize: "30px" }}></i>
         </button>
       </div>
