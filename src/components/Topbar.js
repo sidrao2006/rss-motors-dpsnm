@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
@@ -10,6 +10,13 @@ import '../styles/Topbar.css'
 export default function Topbar() {
   const theme = window.localStorage.getItem('theme') === 'theme-dark' ? '-dark' : '';
 
+  const [batteryLevel, setBatteryLevel] = React.useState(100);
+
+  useEffect(() => {
+    const updateBatteryLevel = async () => setBatteryLevel((await navigator.getBattery()).level * 100);
+    updateBatteryLevel();
+  }, []);
+
   return (
     <>
       <Navbar fixed="top">
@@ -17,39 +24,39 @@ export default function Topbar() {
         <Container className="d-flex align-items-center">
           <Navbar.Brand href="#"><img src={`${process.env.PUBLIC_URL}/logo${theme}.png`} alt="RSS Motors" style={{ width: "55px", height: "55px" }} /></Navbar.Brand>
           <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
-            <span className="dashboard-text" style={{ fontSize: "34px", fontWeight: "600" }}>D</span>
-            <span className="m-1 dashboard-text scale fontSize" >N</span>
-            <span className="m-1 dashboard-text scale fontSize" >R</span>
-            <span className="m-1 dashboard-text scale fontSize" >P</span>
+            <span className="body-theme-char scale fontSize" style={{ fontSize: "34px", fontWeight: "600" }}>D</span>
+            <span className="m-1 body-theme-char scale fontSize" style={{ fontSize: "15px" }}>N</span>
+            <span className="m-1 body-theme-char scale fontSize" style={{ fontSize: "15px" }}>R</span>
+            <span className="m-1 body-theme-char scale fontSize" style={{ fontSize: "15px" }}>P</span>
 
 
           </Nav.Link>
           <Nav className="float-right">
             <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
 
-              <span className="dashboard-text">80%</span>
+              <span className="body-theme-char">{batteryLevel}%</span>
               <div>
-                <i className="fa fa-battery-3 m-1 dashboard-text" size="lg" style={{ fontSize: "24px" }}></i>
+                <i className="fa fa-battery-full m-1 body-theme-char" size="lg" style={{ fontSize: "24px" }}></i>
               </div>
             </Nav.Link>
 
 
             <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
-              <i className="fas fa-cloud-sun dashboard-text" style={{ fontSize: "21px" }}></i>
-              <span className="m-1 dashboard-text">35°</span>
+              <i className="fas fa-cloud-sun body-theme-char" style={{ fontSize: "21px" }}></i>
+              <span className="m-1 body-theme-char">35°</span>
 
             </Nav.Link>
             <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
-              <span className="dashboard-text">
+              <span className="body-theme-char">
                 14 August 2026
               </span>
             </Nav.Link>
-            <Nav.Link href="#" className="d-flex justify-content-center align-items-center dashboard-text">
-              <Clock className="dashboard-text" />
+            <Nav.Link href="#" className="d-flex justify-content-center align-items-center body-theme-char">
+              <Clock className="body-theme-char" />
             </Nav.Link>
 
             <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
-              <span className="dashboard-text">Logged in as {users[useParams().id].name}</span>
+              <span className="body-theme-char">Logged in as {users[useParams().id].name}</span>
             </Nav.Link>
           </Nav>
         </Container>

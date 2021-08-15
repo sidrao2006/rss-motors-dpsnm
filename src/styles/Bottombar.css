@@ -18,24 +18,19 @@
     width: 30px;
     display: block;
 }
-.high-beam-down {
+.low-beam {
     background-image: url(../assets/lowbeam.png);
-    height: 30px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
     display: block;
 }
 
-/* .heat-seat:hover{
-    background-image: url(../assets/heatseatRed.png);
-
-} */
-
-.heat-seat.dashboard-text, .high-beam.dashboard-text {
+.heat-seat.body-theme-char, .high-beam.body-theme-char {
     filter: contrast(0.5);
     transition: filter 0.4s;
 }
 
-.heat-seat.dashboard-text:hover, .high-beam.dashboard-text:hover {
+.heat-seat.body-theme-char:hover, .high-beam.body-theme-char:hover {
     filter: contrast(1);
 }
 

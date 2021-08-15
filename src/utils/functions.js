@@ -5,7 +5,7 @@ export function changeColor(heatseat) {
 }
 // highbeam direction animation function
 export function changeDirection(highbeam) {
-    highbeam.classList.toggle("high-beam-down");
+    highbeam.classList.toggle("low-beam");
     highbeam.classList.toggle("high-beam");
 }
 // parking red color change function
@@ -40,4 +40,21 @@ export function updateTemperature(setter, value, key) {
     setter(value);
 
     window.localStorage.setItem(key, value);
+}
+
+// function to set a given theme/color-scheme
+export function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+// function to toggle between light and dark theme
+export function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-light');
+        window.location.reload();
+    } else {
+        setTheme('theme-dark');
+        window.location.reload();
+
+    }
 }

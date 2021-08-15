@@ -17,9 +17,11 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
+    const theme = window.localStorage.getItem('theme') === 'theme-dark' ? 'night' : 'day';
+
     const map = new mapboxgl.Map({
       container: this.mapContainer.current,
-      style: 'mapbox://styles/mapbox/navigation-day-v1',
+      style: `mapbox://styles/mapbox/navigation-${theme}-v1`,
       attributionControl: false,
       center: [73.01854585689695, 19.00641653688912],
       zoom: 16,
