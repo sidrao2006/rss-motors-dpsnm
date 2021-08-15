@@ -1,0 +1,8 @@
+.scale:hover{
+    transform: scale(2);
+    padding: 2px;
+}
+
+.fontSize{
+    font-size: 15px;
+}

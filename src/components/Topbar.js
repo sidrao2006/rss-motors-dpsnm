@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Clock from './Clock.js'
 import { useParams } from 'react-router-dom';
 import { users } from "../utils/users.js";
+import '../styles/Topbar.css'
 
 export default function Topbar() {
   const theme = window.localStorage.getItem('theme') === 'theme-dark' ? '-dark' : '';
@@ -17,9 +18,9 @@ export default function Topbar() {
           <Navbar.Brand href="#"><img src={`${process.env.PUBLIC_URL}/logo${theme}.png`} alt="RSS Motors" style={{ width: "55px", height: "55px" }} /></Navbar.Brand>
           <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
             <span className="dashboard-text" style={{ fontSize: "34px", fontWeight: "600" }}>D</span>
-            <span className="m-1 dashboard-text" style={{ fontSize: "15px" }}>N</span>
-            <span className="m-1 dashboard-text" style={{ fontSize: "15px" }}>R</span>
-            <span className="m-1 dashboard-text" style={{ fontSize: "15px" }}>P</span>
+            <span className="m-1 dashboard-text scale fontSize" >N</span>
+            <span className="m-1 dashboard-text scale fontSize" >R</span>
+            <span className="m-1 dashboard-text scale fontSize" >P</span>
 
 
           </Nav.Link>
