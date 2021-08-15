@@ -38,3 +38,7 @@
 .heat-seat.dashboard-text:hover, .high-beam.dashboard-text:hover {
     filter: contrast(1);
 }
+
+.color-red{
+    color: red;
+}

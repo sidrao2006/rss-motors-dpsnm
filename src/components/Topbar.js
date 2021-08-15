@@ -28,7 +28,7 @@ export default function Topbar() {
 
               <span className="dashboard-text">80%</span>
               <div>
-                <i className="fa fa-battery-full m-1 dashboard-text" size="lg" style={{ fontSize: "24px" }}></i>
+                <i className="fa fa-battery-3 m-1 dashboard-text" size="lg" style={{ fontSize: "24px" }}></i>
               </div>
             </Nav.Link>
 

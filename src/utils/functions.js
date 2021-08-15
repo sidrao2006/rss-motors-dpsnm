@@ -12,6 +12,11 @@ export function changeDirection(highbeam) {
 export function changeColorparking(parking) {
     parking.classList.toggle("red");
 }
+// car color change 
+export function changeColorcar(car) {
+    car.classList.toggle("color-red");
+}
+
 // indicator flicker animation
 export function changeColorindicator(indicators) {
     indicators.classList.toggle("flickercolor");

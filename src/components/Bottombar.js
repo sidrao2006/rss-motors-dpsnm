@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { changeColor, updateTemperature, changeMute, changeDirection } from "../utils/functions.js";
+import { changeColor, updateTemperature, changeMute, changeDirection , changeColorcar } from "../utils/functions.js";
 import { useParams } from 'react-router-dom';
 
 
@@ -59,9 +59,9 @@ export default function BottomBar() {
                             </div>
                         </Nav.Link>
 
-                        <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
+                        <Nav.Link href="#" onClick={(e) => changeColorcar(e.target)} className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="fa fa-car dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-car" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
