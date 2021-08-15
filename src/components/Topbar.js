@@ -9,10 +9,10 @@ import { users } from "../utils/users.js";
 export default function Topbar() {
   const theme = window.localStorage.getItem('theme') === 'theme-dark' ? '-dark' : '';
 
-  const [batteryLevel, setBatteryLevel] = React.useState(100);
+  const [batteryLevel, setBatteryLevel] = React.useState('100');
 
   useEffect(() => {
-    const updateBatteryLevel = async () => setBatteryLevel((await navigator.getBattery()).level * 100);
+    const updateBatteryLevel = async () => setBatteryLevel(((await navigator.getBattery()).level * 100).toFixed(0));
     updateBatteryLevel();
   }, []);
 

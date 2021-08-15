@@ -7,10 +7,10 @@ import "../styles/welcome.css";
 import { toggleTheme } from "../utils/functions";
 
 export default function Welcome() {
-  const [batteryLevel, setBatteryLevel] = React.useState(100);
+  const [batteryLevel, setBatteryLevel] = React.useState('100');
 
   React.useEffect(() => {
-    const updateBatteryLevel = async () => setBatteryLevel((await navigator.getBattery()).level * 100);
+    const updateBatteryLevel = async () => setBatteryLevel(((await navigator.getBattery()).level * 100).toFixed(0));
     updateBatteryLevel();
   }, []);
 
