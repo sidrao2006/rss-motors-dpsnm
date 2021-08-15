@@ -7,10 +7,10 @@ import "../styles/welcome.css";
 import { toggleTheme } from "../utils/functions";
 
 export default function Welcome() {
-  const [batteryLevel, setBatteryLevel] = React.useState('100');
+  const [batteryLevel, setBatteryLevel] = React.useState(100);
 
   React.useEffect(() => {
-    const updateBatteryLevel = async () => setBatteryLevel(((await navigator.getBattery()).level * 100).toFixed(0));
+    const updateBatteryLevel = async () => setBatteryLevel(Math.floor((await navigator.getBattery()).level * 100));
     updateBatteryLevel();
   }, []);
 
@@ -68,7 +68,7 @@ export default function Welcome() {
           </i>
           <span className="pointer battery body-theme-char">
             <span style={{ fontSize: "10px", fontWeight: "700" }}>{batteryLevel}%</span>
-            <i className="pointer fa fa-battery-4 body-theme-char" style={{ fontSize: "25px" }}></i>
+            <i className={`pointer fa fa-battery-${Math.floor(batteryLevel / 25) || 1} body-theme-char`} style={{ fontSize: "25px" }}></i>
           </span>
           <i className="pointer fas fa-cloud-sun-rain body-theme-char"></i>
         </div>
