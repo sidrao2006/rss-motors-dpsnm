@@ -22,61 +22,61 @@ export default function BottomBar() {
                 <Container className="d-flex align-items-center">
                     <Nav style={{ border: "0px solid black", width: "100%" }} className="d-flex justify-content-around align-items-center container-fluid">
                         <Nav.Link href="#" onClick={(e) => changeDirection(e.target)} className="d-flex justify-content-center align-items-center">
-                            <i className="high-beam dashboard-text" style={{ fontSize: "25px" }}></i>
+                            <i className="high-beam body-theme-char"></i>
                         </Nav.Link>
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="fa fa-calendar dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-calendar body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
 
                         <Nav.Link href="#" onClick={(e) => changeColor(e.target)} className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="heat-seat dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="heat-seat body-theme-char"></i>
                             </div>
                         </Nav.Link>
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div style={{ border: "0px solid black", flexDirection: "column", boxSizing: "border-box", marginTop: "10px" }} className="d-flex justify-content-between align-items-center">
-                                <i className="fa fa-chevron-up dashboard-text" id="tempIncrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature1, temperature1 + 1, `${id}-temperature1`)}></i>
-                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temperature1}</span>
-                                <i className="fa fa-chevron-down dashboard-text" id="tempDecrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature1, temperature1 - 1, `${id}-temperature1`)}></i>
+                                <i className="fa fa-chevron-up body-theme-char" id="tempIncrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature1, temperature1 + 1, `${id}-temperature1`)}></i>
+                                <span className="body-theme-char" style={{ fontWeight: "bold" }}>{temperature1}</span>
+                                <i className="fa fa-chevron-down body-theme-char" id="tempDecrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature1, temperature1 - 1, `${id}-temperature1`)}></i>
                             </div>
                         </Nav.Link>
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="fa fa-fan dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-fan body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div style={{ border: "0px solid black", flexDirection: "column", boxSizing: "border-box", marginTop: "10px" }} className="d-flex justify-content-between align-items-center">
-                                <i className="fa fa-chevron-up dashboard-text" id="tempIncrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature2, temperature2 + 1, `${id}-temperature2`)}></i>
-                                <span className="dashboard-text" style={{ fontWeight: "bold" }}>{temperature2}</span>
-                                <i className="fa fa-chevron-down dashboard-text" id="tempDecrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature2, temperature2 - 1, `${id}-temperature2`)}></i>
+                                <i className="fa fa-chevron-up body-theme-char" id="tempIncrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature2, temperature2 + 1, `${id}-temperature2`)}></i>
+                                <span className="body-theme-char" style={{ fontWeight: "bold" }}>{temperature2}</span>
+                                <i className="fa fa-chevron-down body-theme-char" id="tempDecrease" style={{ fontSize: "25px" }} onClick={() => updateTemperature(setTemperature2, temperature2 - 1, `${id}-temperature2`)}></i>
                             </div>
                         </Nav.Link>
 
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="fa fa-car dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-car body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="fa fa-mobile-alt dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-mobile-alt body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i onClick={(e) => changeMute(e.target)} className="fa fa-volume-up dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i onClick={(e) => changeMute(e.target)} className="fa fa-volume-up body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
                         <Nav.Link href="#" className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="fa fa-cloud-sun-rain dashboard-text" style={{ fontSize: "25px" }}></i>
+                                <i className="fa fa-cloud-sun-rain body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
                     </Nav>

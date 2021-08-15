@@ -1,6 +1,6 @@
 html, body {
-  background-image: linear-gradient(to top left, lightgray 0%, white 100%); 
-  background-color: lightgray;
+  background-image: var(--body-bg-gradient); 
+  background-color: var(--body-bg-fallback);
   height: 100%;
 }
 
@@ -17,4 +17,33 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.body-theme-char {
+  color: var(--body-theme-char-color);
+  transition: color 0.4s;
+}
+
+.body-theme-char:hover {
+  color: var(--body-theme-char-hover-color);
+}
+
+.theme-light {
+  --body-bg-gradient: linear-gradient(to top left, lightgray 0%, white 100%);
+  --bodu-bg-fallback: lightgray;
+
+  --body-theme-char-color: #595959;
+  --body-theme-char-hover-color: black;
+
+  --onboard-welcome-card-bg-color: transparent;
+}
+
+.theme-dark {
+  --body-bg-gradient: linear-gradient(to top left, black 0%, darkgray 100%);
+  --bodu-bg-fallback: lightgray;
+
+  --body-theme-char-color: lightgray;
+  --body-theme-char-hover-color: white;
+
+  --onboard-welcome-card-bg-color: rgb(78, 78, 78);
 }

@@ -4,30 +4,37 @@ import { Link } from "react-router-dom";
 import { users } from "../utils/users.js";
 
 import "../styles/welcome.css";
-import "../styles/dashboard.css";
+import { toggleTheme } from "../utils/functions";
 
-export default function welcome() {
+export default function Welcome() {
+  const [batteryLevel, setBatteryLevel] = React.useState(100);
+
+  React.useEffect(() => {
+    const updateBatteryLevel = async () => setBatteryLevel((await navigator.getBattery()).level * 100);
+    updateBatteryLevel();
+  }, []);
+
   return (
     <div id="container">
       <div id="nav">
-        <p>14 August 2026</p>
+        <p className="body-theme-char">14 August 2026</p>
         {/* <h2>RSS MOTORS</h2> */}
-        <p> <Clock /> </p>
+        <Clock className="body-theme-char" />
       </div>
 
 
       <div id="welcome">
-        <h2>Welcome!</h2>
-        <h6>Pick a profile to continue:</h6>
+        <h2 className="body-theme-char">Welcome!</h2>
+        <h6 className="body-theme-char">Pick a profile to continue:</h6>
       </div>
 
       <div id="card">
         {
           Object.entries(users).map(([uname, { name, email }], i) =>
-            <Link id={`c${i + 1}`} to={`/dashboard/${uname}`}>
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span>{name}</span>
-              <span className="leader" style={{ fontSize: "12px" }}>
+            <Link id={`c${i + 1}`} key={email} to={"/dashboard/" + uname}>
+              <i className="fa fa-user body-theme-char" aria-hidden="true"></i>
+              <span className="body-theme-char">{name}</span>
+              <span className="leader body-theme-char" style={{ fontSize: "12px" }}>
                 {email}
               </span>
             </Link>
@@ -41,28 +48,29 @@ export default function welcome() {
           <button
             className="buttons d-flex justify-content-around align-items-center shadow"
             style={{ width: "140px", height: "50px", borderRadius: "10px" }}
+            onClick={toggleTheme}
           >
             <i
-              className="fas fa-moon dashboard-text"
+              className="fas fa-moon body-theme-char"
               style={{ fontSize: "20px" }}
             ></i>
             <i
-              className="fas fa-sun dashboard-text"
+              className="fas fa-sun body-theme-char"
               style={{ fontSize: "20px" }}
             ></i>
           </button>
         </div>
 
         <div className="icons">
-          <i className="pointer fa fa-gear dashboard-text"></i>
-          <i className="pointer material-icons dashboard-text" style={{ fontSize: "30px" }}>
+          <i className="pointer fa fa-gear body-theme-char"></i>
+          <i className="pointer material-icons body-theme-char" style={{ fontSize: "30px" }}>
             bluetooth
           </i>
-          <span className="pointer battery dashboard-text">
-            <span style={{ fontSize: "10px", fontWeight: "700" }}>80%</span>
-            <i className="pointer fa fa-battery-4 dashboard-text" style={{ fontSize: "25px" }}></i>
+          <span className="pointer battery body-theme-char">
+            <span style={{ fontSize: "10px", fontWeight: "700" }}>{batteryLevel}%</span>
+            <i className="pointer fa fa-battery-4 body-theme-char" style={{ fontSize: "25px" }}></i>
           </span>
-          <i className="pointer fas fa-cloud-sun-rain dashboard-text"></i>
+          <i className="pointer fas fa-cloud-sun-rain body-theme-char"></i>
         </div>
       </footer>
     </div>
