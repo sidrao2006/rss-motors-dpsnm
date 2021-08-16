@@ -4,6 +4,7 @@ import Onboard from "./onboard";
 import Dashboard from "./dashboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { setTheme } from "./utils/functions";
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./index.css";
@@ -35,3 +36,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+serviceWorkerRegistration.register();
