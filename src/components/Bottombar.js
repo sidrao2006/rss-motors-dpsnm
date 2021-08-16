@@ -65,9 +65,9 @@ export default function BottomBar() {
                             </div>
                         </Nav.Link>
 
-                        <Nav.Link href="#" id="bluetoothIcon" onClick={(e) => findbluetooth(e.target)} className="d-flex justify-content-center align-items-center">
+                        <Nav.Link href="#" onClick={(e) => findbluetooth(e.target)} className="d-flex justify-content-center align-items-center">
                             <div>
-                                <i className="fa fa-mobile-alt body-theme-char" style={{ fontSize: "25px" }}></i>
+                                <i className="fab fa-bluetooth body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { users } from "../utils/users.js";
 
 import "../styles/welcome.css";
-import { toggleTheme , findbluetooth } from "../utils/functions";
+import { toggleTheme, findbluetooth } from "../utils/functions";
 
 export default function Welcome() {
   const [batteryLevel, setBatteryLevel] = React.useState(100);
@@ -63,8 +63,7 @@ export default function Welcome() {
 
         <div className="icons">
           <i className="pointer fa fa-gear body-theme-char"></i>
-          <i className="pointer material-icons body-theme-char" onClick={(e)=>findbluetooth(e.target)}  style={{ fontSize: "30px" }}>
-            bluetooth
+          <i className="pointer fab fa-bluetooth body-theme-char" onClick={(e) => findbluetooth(e.target)} style={{ fontSize: "30px" }}>
           </i>
           <span className="pointer battery body-theme-char">
             <span style={{ fontSize: "10px", fontWeight: "700" }}>{batteryLevel}%</span>
