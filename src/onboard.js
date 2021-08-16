@@ -1,17 +1,17 @@
-import { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Component } from "react";
+import { Container } from "react-bootstrap";
 
 // importing components
-import Welcome from './components/welcome'
+import Welcome from "./components/welcome";
 
 class Onboard extends Component {
-    render() {
-        return (
-            <Container fluid id="onboard">
-                <Welcome />
-            </Container>
-        );
-    }
+  render() {
+    return (
+      <Container fluid id="onboard">
+        <Welcome />
+      </Container>
+    );
+  }
 }
 
 export default Onboard;

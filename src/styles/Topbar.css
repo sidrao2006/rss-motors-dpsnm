@@ -1,11 +1,11 @@
-.dnrp:hover{
-    transform: scale(2);
-    padding: 2px;
-    transition: transform 0.2s;
+.dnrp:hover {
+  transform: scale(2);
+  padding: 2px;
+  transition: transform 0.2s;
 }
 
 .dnrp-max {
-    padding: 2px;
-    font-size: 35px;
-    font-weight: 600;
+  padding: 2px;
+  font-size: 35px;
+  font-weight: 600;
 }

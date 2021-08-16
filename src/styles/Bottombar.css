@@ -1,43 +1,45 @@
 .high-beam {
-    background-image: var(--high-beam-bg-image);
-    height: 32px;
-    width: 32px;
-    display: block;
-} 
-
-.heat-seat {
-    background-image: var(--heat-seat-bg-image);
-    height: 30px;
-    width: 30px;
-    display: block;
+  background-image: var(--high-beam-bg-image);
+  height: 32px;
+  width: 32px;
+  display: block;
 }
 
-.blue{
-    color: blue !important;
+.heat-seat {
+  background-image: var(--heat-seat-bg-image);
+  height: 30px;
+  width: 30px;
+  display: block;
+}
+
+.blue {
+  color: blue !important;
 }
 
 .heat-seat-red {
-    background-image: url(../assets/heatseatRed.png);
-    height: 30px;
-    width: 30px;
-    display: block;
+  background-image: url(../assets/heatseatRed.png);
+  height: 30px;
+  width: 30px;
+  display: block;
 }
 .low-beam {
-    background-image: var(--low-beam-bg-image);
-    height: 32px;
-    width: 32px;
-    display: block;
+  background-image: var(--low-beam-bg-image);
+  height: 32px;
+  width: 32px;
+  display: block;
 }
 
-.heat-seat.body-theme-char, .high-beam.body-theme-char {
-    filter: contrast(0.5);
-    transition: filter 0.4s;
+.heat-seat.body-theme-char,
+.high-beam.body-theme-char {
+  filter: contrast(0.5);
+  transition: filter 0.4s;
 }
 
-.heat-seat.body-theme-char:hover, .high-beam.body-theme-char:hover {
-    filter: contrast(1);
+.heat-seat.body-theme-char:hover,
+.high-beam.body-theme-char:hover {
+  filter: contrast(1);
 }
 
-.color-red{
-    color: red;
+.color-red {
+  color: red;
 }

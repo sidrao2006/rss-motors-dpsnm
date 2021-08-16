@@ -10,7 +10,8 @@ export default function Welcome() {
   const [batteryLevel, setBatteryLevel] = React.useState(100);
 
   React.useEffect(() => {
-    const updateBatteryLevel = async () => setBatteryLevel(Math.floor((await navigator.getBattery()).level * 100));
+    const updateBatteryLevel = async () =>
+      setBatteryLevel(Math.floor((await navigator.getBattery()).level * 100));
     updateBatteryLevel();
   }, []);
 
@@ -22,25 +23,24 @@ export default function Welcome() {
         <Clock className="body-theme-char" />
       </div>
 
-
       <div id="welcome">
         <h2 className="body-theme-char">Welcome!</h2>
         <h6 className="body-theme-char">Pick a profile to continue:</h6>
       </div>
 
       <div id="card">
-        {
-          Object.entries(users).map(([uname, { name, email }], i) =>
-            <Link id={`c${i + 1}`} key={email} to={"/dashboard/" + uname}>
-              <i className="fa fa-user body-theme-char" aria-hidden="true"></i>
-              <span className="body-theme-char">{name}</span>
-              <span className="leader body-theme-char" style={{ fontSize: "12px" }}>
-                {email}
-              </span>
-            </Link>
-          )
-        }
-
+        {Object.entries(users).map(([uname, { name, email }], i) => (
+          <Link id={`c${i + 1}`} key={email} to={"/dashboard/" + uname}>
+            <i className="fa fa-user body-theme-char" aria-hidden="true"></i>
+            <span className="body-theme-char">{name}</span>
+            <span
+              className="leader body-theme-char"
+              style={{ fontSize: "12px" }}
+            >
+              {email}
+            </span>
+          </Link>
+        ))}
       </div>
 
       <footer id="footer">
@@ -63,11 +63,21 @@ export default function Welcome() {
 
         <div className="icons">
           <i className="pointer fa fa-gear body-theme-char"></i>
-          <i className="pointer fab fa-bluetooth body-theme-char" onClick={(e) => findbluetooth(e.target)} style={{ fontSize: "30px" }}>
-          </i>
+          <i
+            className="pointer fab fa-bluetooth body-theme-char"
+            onClick={(e) => findbluetooth(e.target)}
+            style={{ fontSize: "30px" }}
+          ></i>
           <span className="pointer battery body-theme-char">
-            <span style={{ fontSize: "10px", fontWeight: "700" }}>{batteryLevel}%</span>
-            <i className={`pointer fa fa-battery-${Math.floor(batteryLevel / 25) || 1} body-theme-char`} style={{ fontSize: "25px" }}></i>
+            <span style={{ fontSize: "10px", fontWeight: "700" }}>
+              {batteryLevel}%
+            </span>
+            <i
+              className={`pointer fa fa-battery-${
+                Math.floor(batteryLevel / 25) || 1
+              } body-theme-char`}
+              style={{ fontSize: "25px" }}
+            ></i>
           </span>
           <i className="pointer fas fa-cloud-sun-rain body-theme-char"></i>
         </div>
