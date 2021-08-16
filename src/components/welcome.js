@@ -2,9 +2,9 @@ import React from "react";
 import Clock from "./Clock";
 import { Link } from "react-router-dom";
 import { users } from "../utils/users.js";
+import { toggleTheme, findbluetooth } from "../utils/functions.js";
 
 import "../styles/welcome.css";
-import { toggleTheme, findbluetooth } from "../utils/functions";
 
 export default function Welcome() {
   const [batteryLevel, setBatteryLevel] = React.useState(100);

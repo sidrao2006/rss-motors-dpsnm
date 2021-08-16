@@ -1,7 +1,5 @@
 import { Component } from "react";
-import { Container } from "react-bootstrap";
-
-// importing components
+import Container from "react-bootstrap/Container";
 import Welcome from "./components/welcome";
 
 class Onboard extends Component {

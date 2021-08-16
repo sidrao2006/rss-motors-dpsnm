@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 import ReactPlayer from "react-player/soundcloud";
 import Buttonpanel from "./components/Buttonpanel";
 import Topbar from "./components/Topbar";

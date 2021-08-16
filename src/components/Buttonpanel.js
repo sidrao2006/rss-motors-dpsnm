@@ -1,8 +1,12 @@
 import React from "react";
+import {
+  changeColorindicator,
+  changeColorvideocall,
+  changeColorparking,
+  toggleTheme,
+} from "../utils/functions.js";
+
 import "../styles/Buttonpanel.css";
-import { changeColorparking, toggleTheme } from "../utils/functions.js";
-import { changeColorindicator } from "../utils/functions.js";
-import { changeColorvideocall } from "../utils/functions.js";
 
 export default function Buttonpanel() {
   return (

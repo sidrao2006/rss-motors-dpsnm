@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Onboard from "./onboard";
 import Dashboard from "./dashboard";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { setTheme } from "./utils/functions";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./index.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { setTheme } from "./utils/functions";
 
 ReactDOM.render(
   <React.StrictMode>
