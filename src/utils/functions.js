@@ -18,14 +18,15 @@ export function changeColorcar(car) {
 }
 // find bluetooth
 export function findbluetooth(bluetoothIcon) {
-console.log(bluetoothIcon.style.color);
+    console.log(bluetoothIcon.style.color);
 
-    if(bluetoothIcon.classList.contains("blue")){
-        bluetoothIcon.classList.toggle('blue',false)
-        
-    }else{
-        navigator.bluetooth.requestDevice({acceptAllDevices: true}).then(() => {  
-        bluetoothIcon.classList.toggle("blue",true) }).catch(e => console.error(e))
+    if (bluetoothIcon.classList.contains("blue")) {
+        bluetoothIcon.classList.toggle('blue', false)
+
+    } else {
+        navigator.bluetooth.requestDevice({ acceptAllDevices: true }).then(() => {
+            bluetoothIcon.classList.toggle("blue", true)
+        }).catch(e => console.error(e))
         console.log(bluetoothIcon.style.color);
     }
 }
@@ -68,5 +69,25 @@ export function toggleTheme() {
         setTheme('theme-dark');
         window.location.reload();
 
+    }
+}
+
+export function manageDNRPsizes() {
+
+    const dnrpDOMelems = document.getElementsByClassName('dnrp');
+
+    for (var i = 0; i < dnrpDOMelems.length; i++) {
+        dnrpDOMelems[i].addEventListener('click', e => {
+            e.target.classList.toggle('dnrp-max');
+            e.target.classList.toggle('dnrp');
+
+            const dnrpElems = document.getElementsByClassName('dnrp-max');
+
+            for (var i = 0; i < dnrpElems.length; i++) {
+                if (dnrpElems[i] !== e.target) {
+                    dnrpElems[i].classList.remove('dnrp-max');
+                }
+            }
+        });
     }
 }

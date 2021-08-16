@@ -1,8 +1,11 @@
-.scale:hover{
+.dnrp:hover{
     transform: scale(2);
     padding: 2px;
+    transition: transform 0.2s;
 }
 
-.fontSize{
-    font-size: 15px;
+.dnrp-max {
+    padding: 2px;
+    font-size: 35px;
+    font-weight: 600;
 }
