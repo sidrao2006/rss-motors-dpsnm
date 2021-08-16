@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import Clock from "./Clock.js";
+import Clock from "./Clock";
 import { useParams } from "react-router-dom";
-import { users } from "../utils/users.js";
-import { manageDNRPsizes } from "../utils/functions.js";
+import { users } from "../utils/users";
+import { manageDNRPsizes } from "../utils/functions";
 
 import "../styles/Topbar.css";
 

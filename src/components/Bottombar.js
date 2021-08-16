@@ -9,7 +9,7 @@ import {
   changeDirection,
   changeColorcar,
   findbluetooth,
-} from "../utils/functions.js";
+} from "../utils/functions";
 import { useParams } from "react-router-dom";
 
 import "../styles/Bottombar.css";

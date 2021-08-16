@@ -1,8 +1,8 @@
 import React from "react";
 import Clock from "./Clock";
 import { Link } from "react-router-dom";
-import { users } from "../utils/users.js";
-import { toggleTheme, findbluetooth } from "../utils/functions.js";
+import { users } from "../utils/users";
+import { toggleTheme, findbluetooth } from "../utils/functions";
 
 import "../styles/welcome.css";
 

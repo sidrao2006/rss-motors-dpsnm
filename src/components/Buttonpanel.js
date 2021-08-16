@@ -4,7 +4,7 @@ import {
   changeColorvideocall,
   changeColorparking,
   toggleTheme,
-} from "../utils/functions.js";
+} from "../utils/functions";
 
 import "../styles/Buttonpanel.css";
 
