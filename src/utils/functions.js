@@ -68,12 +68,10 @@ export function toggleTheme() {
     } else {
         setTheme('theme-dark');
         window.location.reload();
-
     }
 }
 
 export function manageDNRPsizes() {
-
     const dnrpDOMelems = document.getElementsByClassName('dnrp');
 
     for (var i = 0; i < dnrpDOMelems.length; i++) {

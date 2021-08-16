@@ -13,6 +13,11 @@ ReactDOM.render(
     {
       // Immediately invoked function to set the theme on initial load
       (function () {
+        if (!localStorage.getItem('theme'))
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? setTheme('theme-dark')
+            : setTheme('theme-light');
+
         if (localStorage.getItem('theme') === 'theme-dark') {
           setTheme('theme-dark');
         } else {
