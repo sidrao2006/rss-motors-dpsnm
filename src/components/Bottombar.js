@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { changeColor, updateTemperature, changeMute, changeDirection , changeColorcar, findbluetooth } from "../utils/functions.js";
+import { changeColor, updateTemperature, changeMute, changeDirection, changeColorcar, findbluetooth } from "../utils/functions.js";
 import { useParams } from 'react-router-dom';
 
 
@@ -64,15 +64,15 @@ export default function BottomBar() {
                                 <i className="fa fa-car body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
-                        
-                        <Nav.Link href="#" id="bluetoothIcon" onClick={(e)=>findbluetooth(e.target)} className="d-flex justify-content-center align-items-center">
+
+                        <Nav.Link href="#" id="bluetoothIcon" onClick={(e) => findbluetooth(e.target)} className="d-flex justify-content-center align-items-center">
                             <div>
                                 <i className="fa fa-mobile-alt body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
                         </Nav.Link>
 
 
-                        <Nav.Link href="#" onClick={(e)=>changeMute(e.target)}  className="d-flex justify-content-center align-items-center">
+                        <Nav.Link href="#" onClick={(e) => changeMute(e.target)} className="d-flex justify-content-center align-items-center">
                             <div>
                                 <i className="fa fa-volume-up body-theme-char" style={{ fontSize: "25px" }}></i>
                             </div>
